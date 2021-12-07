@@ -52,11 +52,24 @@ const App = () => {
         }}
       >
         <Grid container justify="space-around" spacing={2} marginLeft="1vh">
-          <Grid item xs={4} justifyContent="left">
+          <Grid
+            item
+            xs={3}
+            justifyContent="left"
+            sx={{
+              display: { xs: "none", lg: "block" },
+            }}
+          >
             <img src={avatar}></img>
           </Grid>
 
-          <Grid item xs={7} justifyContent="right" marginTop="2vh">
+          <Grid
+            item
+            xs={7}
+            justifyContent="right"
+            marginTop="2vh"
+            marginLeft="6vh"
+          >
             <Typography variant="h3" gutterBottom component="div">
               Joonas Kirvesmäki
             </Typography>
