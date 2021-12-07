@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from "react";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
+import { Box, Container, Grid, Typography } from "@mui/material/";
 import avatar from "./images/avatar.png";
 import reactimg from "./images/reactimg.svg";
 import gitlogo from "./images/gitlogo.png";
 import css from "./images/css.png";
-import Typography from "@mui/material/Typography";
-import LinearProgress from "@mui/material/LinearProgress";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Skills from "./Components/Skills";
+import Intro from "./Components/Intro";
+import Contact from "./Components/Contact";
 
 const App = (props) => {
   return (
@@ -22,8 +17,8 @@ const App = (props) => {
       <Box
         sx={{
           flexGrow: 1,
-          marginTop: "5vh",
-          paddingBottom: "5vh",
+          marginTop: "3vh",
+          marginBottom: "3vh",
           borderRadius: 2,
           backgroundColor: "#cfe8fc",
         }}
@@ -39,7 +34,6 @@ const App = (props) => {
           >
             <img src={avatar} />
           </Grid>
-
           <Grid
             item
             xs={7}
@@ -47,16 +41,7 @@ const App = (props) => {
             marginTop="2vh"
             marginLeft="6vh"
           >
-            <Typography variant="h3" gutterBottom component="div">
-              Joonas Kirvesmäki
-            </Typography>
-            <Typography variant="h6" gutterBottom component="div">
-              Third year IT student at Haaga-Helia. Currently looking for a
-              front-end development internship.
-            </Typography>
-            <Typography variant="h6" gutterBottom component="div">
-              I mainly use React for my projects.
-            </Typography>
+            <Intro />
           </Grid>
           <Grid item>
             <Typography
@@ -109,25 +94,7 @@ const App = (props) => {
             </Typography>
           </Grid>
           <Grid item xs={8} marginTop="3vh">
-            <Typography variant="h4" gutterBottom component="div">
-              Contact me
-            </Typography>
-            <Typography
-              display="block"
-              variant="subtitle1"
-              gutterBottom
-              component="div"
-            >
-              Joonas.kirvesmaki@gmail.com
-            </Typography>
-            <Typography
-              display="block"
-              variant="subtitle1"
-              gutterBottom
-              component="div"
-            >
-              +358 456366277
-            </Typography>
+            <Contact />
           </Grid>
         </Grid>
 
