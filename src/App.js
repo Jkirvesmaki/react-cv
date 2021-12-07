@@ -10,7 +10,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-import "@fontsource/abel";
+
 import LinkedIn from "@mui/icons-material/LinkedIn";
 
 const App = () => {
