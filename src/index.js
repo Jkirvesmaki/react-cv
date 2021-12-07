@@ -9,6 +9,11 @@ const theme = createTheme({
     fontFamily: ["Abel", "Sans-Serif"].join(","),
     fontSize: 18,
   },
+  allVariants: {
+    "&": {
+      display: "inline",
+    },
+  },
 });
 
 ReactDOM.render(

@@ -3,6 +3,9 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import avatar from "./images/avatar.png";
+import reactimg from "./images/reactimg.svg";
+import gitlogo from "./images/gitlogo.png";
+import css from "./images/css.png";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -10,36 +13,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
-
 import LinkedIn from "@mui/icons-material/LinkedIn";
+import Skills from "./Components/Skills";
 
-const App = () => {
-  const [progressReact, setProgressReact] = React.useState(0);
-  const [progressGit, setProgressGit] = React.useState(0);
-  const [progressCss, setProgressCss] = React.useState(0);
-  const [progress, setProgress] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgressReact((oldProgress) => {
-        const diff = 5;
-        return Math.min(oldProgress + diff, 70);
-      });
-      setProgressGit((oldProgress) => {
-        const diff = 5;
-        return Math.min(oldProgress + diff, 80);
-      });
-      setProgressCss((oldProgress) => {
-        const diff = 5;
-        return Math.min(oldProgress + diff, 50);
-      });
-    }, 50);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
+const App = (props) => {
   return (
     <Container maxWidth="md">
       <Box
@@ -60,7 +37,7 @@ const App = () => {
               display: { xs: "none", lg: "block" },
             }}
           >
-            <img src={avatar}></img>
+            <img src={avatar} />
           </Grid>
 
           <Grid
@@ -81,35 +58,59 @@ const App = () => {
               I mainly use React for my projects.
             </Typography>
           </Grid>
-
-          <Grid item xs={8} marginTop="3vh">
-            <Typography variant="h4" gutterBottom component="div">
+          <Grid item>
+            <Typography
+              variant="h4"
+              gutterBottom
+              component="div"
+              marginTop="4vh"
+            >
               Skills
-              <br />
-              <br />
             </Typography>
-            <Typography variant="h6" gutterBottom component="div">
-              React
-            </Typography>
-            <LinearProgress variant="determinate" value={progressReact} />
-            <br />
-            <br />
-            <Typography variant="h6" gutterBottom component="div">
-              CSS
-            </Typography>
-            <LinearProgress variant="determinate" value={progressCss} />
-
-            <br />
-            <br />
-            <Typography variant="h6" gutterBottom component="div">
-              Git
-            </Typography>
-            <LinearProgress variant="determinate" value={progressGit} />
           </Grid>
+          <Grid
+            container
+            justify="space-around"
+            spacing={2}
+            marginLeft="1vh"
+            direction="row"
+            justifyContent="center"
+            paddingBottom="2vh"
+          >
+            <Grid item xs={3} marginTop="3vh">
+              <Skills
+                skills={"React"}
+                image={reactimg}
+                width={"110"}
+                heigth={"95"}
+              />
+            </Grid>
+            <Grid item xs={3} marginTop="3vh">
+              <Skills skills={"CSS"} image={css} width={"110"} heigth={"95"} />
+            </Grid>
+            <Grid item xs={3} marginTop="3vh">
+              <Skills
+                skills={"Git"}
+                image={gitlogo}
+                width={"110"}
+                heigth={"95"}
+              />
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Typography variant="h4" gutterBottom component="div">
+              About
+            </Typography>
 
+            <Typography variant="h6" gutterBottom component="div">
+              I am a 25 year old Student from Helsinki. Im interested in web
+              development and especially Javascript, React and it's various
+              libraries.
+            </Typography>
+          </Grid>
           <Grid item xs={8} marginTop="3vh">
             <Typography variant="h4" gutterBottom component="div">
-              Contact
+              Contact me
             </Typography>
             <Typography
               display="block"
