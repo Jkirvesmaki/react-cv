@@ -3,18 +3,39 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+const theme = createTheme();
 
-const theme = createTheme({
-  typography: {
-    fontFamily: ["Abel", "Sans-Serif"].join(","),
-    fontSize: 18,
+theme.typography.h3 = {
+  fontFamily: ["Abel", "Sans-Serif"].join(","),
+  fontSize: "1.2rem",
+  "@media (min-width:600px)": {
+    fontSize: "1rem",
   },
-  allVariants: {
-    "&": {
-      display: "inline",
-    },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "2.4rem",
   },
-});
+};
+theme.typography.h4 = {
+  fontFamily: ["Abel", "Sans-Serif"].join(","),
+  fontSize: "1.2rem",
+  "@media (min-width:600px)": {
+    fontSize: "1rem",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "2.4rem",
+  },
+};
+
+theme.typography.h6 = {
+  fontFamily: ["Abel", "Sans-Serif"].join(","),
+  fontSize: "0.6rem",
+  "@media (min-width:600px)": {
+    fontSize: "0.6rem",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "1.8rem",
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
