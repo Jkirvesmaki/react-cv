@@ -51,7 +51,7 @@ const App = (props) => {
               About
             </Typography>
             <Typography variant="h6" gutterBottom component="div">
-              I am a 25 year old Student from Helsinki. Im interested in web
+              I am a 25 year old student from Helsinki. Im interested in web
               development and especially Javascript, React and it's various
               libraries.
             </Typography>
