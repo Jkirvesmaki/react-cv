@@ -3,14 +3,17 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#000000",
+    },
+  },
+});
 
 theme.typography.h3 = {
   fontFamily: ["Abel", "Sans-Serif"].join(","),
-  fontSize: "1.2rem",
-  "@media (min-width:600px)": {
-    fontSize: "1rem",
-  },
+  fontSize: "2rem",
   [theme.breakpoints.up("md")]: {
     fontSize: "2.4rem",
   },
@@ -18,22 +21,15 @@ theme.typography.h3 = {
 theme.typography.h4 = {
   fontFamily: ["Abel", "Sans-Serif"].join(","),
   fontSize: "1.2rem",
-  "@media (min-width:600px)": {
-    fontSize: "1rem",
-  },
   [theme.breakpoints.up("md")]: {
     fontSize: "2.4rem",
   },
 };
-
 theme.typography.h6 = {
   fontFamily: ["Abel", "Sans-Serif"].join(","),
-  fontSize: "0.6rem",
-  "@media (min-width:600px)": {
-    fontSize: "0.6rem",
-  },
+  fontSize: "1.1rem",
   [theme.breakpoints.up("md")]: {
-    fontSize: "1.8rem",
+    fontSize: "2rem",
   },
 };
 

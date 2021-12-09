@@ -4,7 +4,12 @@ import { Typography } from "@mui/material/";
 const Contact = () => {
   return (
     <div>
-      <Typography variant="h4" gutterBottom component="div">
+      <Typography
+        variant="h4"
+        gutterBottom
+        component="div"
+        sx={{ fontWeight: "bold" }}
+      >
         Contact me
       </Typography>
       <Typography
@@ -13,7 +18,9 @@ const Contact = () => {
         gutterBottom
         component="div"
       >
-        Joonas.kirvesmaki@gmail.com
+        <a href={`mailto:$Joonas.kirvesmaki@gmail.com}`}>
+          Joonas.kirvesmaki@gmail.com
+        </a>
       </Typography>
       <Typography
         display="block"

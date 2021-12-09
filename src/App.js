@@ -1,89 +1,59 @@
 import React, { useState, useEffect } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material/";
 import avatar from "./images/avatar.png";
-import reactimg from "./images/reactimg.svg";
-import gitlogo from "./images/gitlogo.png";
-import css from "./images/css.png";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import Skills from "./Components/Skills";
 import Intro from "./Components/Intro";
 import Contact from "./Components/Contact";
-
+import Avatar from "@mui/material/Avatar";
 const App = (props) => {
   return (
     <Container maxWidth="md">
       <Box
         sx={{
           flexGrow: 1,
-          marginTop: "3vh",
-          marginBottom: "3vh",
-          borderRadius: 2,
+          borderRadius: 3,
           backgroundColor: "#cfe8fc",
         }}
       >
-        <Grid container justify="space-around" spacing={2} marginLeft="1vh">
+        <Grid container justify="space-around" spacing={2}>
           <Grid
             item
-            xs={3}
+            xs={5}
             justifyContent="left"
             sx={{
               display: { xs: "none", lg: "block" },
             }}
           >
-            <img src={avatar} />
+            <Avatar
+              alt="avatar"
+              src={avatar}
+              sx={{ width: 240, height: 265 }}
+              variant="square"
+            />
           </Grid>
-          <Grid
-            item
-            xs={7}
-            justifyContent="right"
-            marginTop="2vh"
-            marginLeft="6vh"
-          >
+          <Grid item xs={7} justifyContent="right" marginTop="2.5vh">
             <Intro />
           </Grid>
+
+          <Grid
+            container
+            justify="space-around"
+            spacing={2}
+            direction="row"
+            justifyContent="center"
+          ></Grid>
           <Grid item>
             <Typography
               variant="h4"
               gutterBottom
               component="div"
-              marginTop="4vh"
+              marginTop="2vh"
+              sx={{ fontWeight: "bold" }}
             >
-              Skills
-            </Typography>
-          </Grid>
-          <Grid
-            container
-            justify="space-around"
-            spacing={2}
-            marginLeft="1vh"
-            direction="row"
-            justifyContent="center"
-            paddingBottom="2vh"
-          >
-            <Grid item xs={3} marginTop="3vh">
-              <Skills
-                skills={"React"}
-                image={reactimg}
-                width={"110"}
-                heigth={"95"}
-              />
-            </Grid>
-            <Grid item xs={3} marginTop="3vh">
-              <Skills skills={"CSS"} image={css} width={"110"} heigth={"95"} />
-            </Grid>
-            <Grid item xs={3} marginTop="3vh">
-              <Skills
-                skills={"Git"}
-                image={gitlogo}
-                width={"110"}
-                heigth={"95"}
-              />
-            </Grid>
-          </Grid>
-          <Grid item>
-            <Typography variant="h4" gutterBottom component="div">
               About
             </Typography>
 
@@ -93,13 +63,36 @@ const App = (props) => {
               libraries.
             </Typography>
           </Grid>
+          <Grid item xs={8}>
+            <Typography
+              variant="h4"
+              gutterBottom
+              component="div"
+              marginTop="2vh"
+              sx={{ fontWeight: "bold" }}
+            >
+              Skills
+            </Typography>
+            <Typography
+              variant="h6"
+              gutterBottom
+              component="div"
+              marginBottom="4vh"
+            >
+              I am familiar with HTML, CSS, Javascript, React, HTTP request,
+              JSON, SQL and various other technologies such as Git and Linux.
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Skills />
+          </Grid>
           <Grid item xs={8} marginTop="3vh">
             <Contact />
           </Grid>
         </Grid>
 
         <Grid
-          marginTop="6vh"
+          marginTop="2vh"
           container
           spacing={0}
           direction="row"
@@ -111,12 +104,12 @@ const App = (props) => {
               href="https://www.linkedin.com/in/joonas-kirvesm%C3%A4ki-836632227/"
               target="_blank"
             >
-              <LinkedIn sx={{ fontSize: 80, color: "#666666" }} />
+              <LinkedIn sx={{ fontSize: 90, color: "#666666" }} />
             </Link>
           </Grid>
           <Grid item xs={2}>
             <Link href="https://github.com/Jkirvesmaki" target="_blank">
-              <GitHubIcon sx={{ fontSize: 80, color: "#666666" }} />
+              <GitHubIcon sx={{ fontSize: 90, color: "#666666" }} />
             </Link>
           </Grid>
         </Grid>

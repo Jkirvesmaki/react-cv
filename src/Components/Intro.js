@@ -3,7 +3,12 @@ import { Typography } from "@mui/material/";
 const Intro = () => {
   return (
     <div>
-      <Typography variant="h3" gutterBottom component="div">
+      <Typography
+        variant="h3"
+        gutterBottom
+        component="div"
+        sx={{ fontWeight: "bold" }}
+      >
         Joonas Kirvesmäki
       </Typography>
       <Typography variant="h6" gutterBottom component="div">
