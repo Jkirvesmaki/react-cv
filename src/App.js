@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material/";
 import avatar from "./images/avatar.png";
-
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import LinkedIn from "@mui/icons-material/LinkedIn";
@@ -17,6 +16,8 @@ const App = (props) => {
           flexGrow: 1,
           borderRadius: 3,
           backgroundColor: "#cfe8fc",
+          paddingLeft: "1vh",
+          paddingTop: "1vh",
         }}
       >
         <Grid container justify="space-around" spacing={2}>
@@ -35,17 +36,10 @@ const App = (props) => {
               variant="square"
             />
           </Grid>
-          <Grid item xs={7} justifyContent="right" marginTop="2.5vh">
+          <Grid item xs={7} justifyContent="center" marginTop="2.5vh">
             <Intro />
           </Grid>
 
-          <Grid
-            container
-            justify="space-around"
-            spacing={2}
-            direction="row"
-            justifyContent="center"
-          ></Grid>
           <Grid item>
             <Typography
               variant="h4"
@@ -56,7 +50,6 @@ const App = (props) => {
             >
               About
             </Typography>
-
             <Typography variant="h6" gutterBottom component="div">
               I am a 25 year old Student from Helsinki. Im interested in web
               development and especially Javascript, React and it's various
@@ -77,7 +70,7 @@ const App = (props) => {
               variant="h6"
               gutterBottom
               component="div"
-              marginBottom="4vh"
+              marginBottom="2vh"
             >
               I am familiar with HTML, CSS, Javascript, React, HTTP request,
               JSON, SQL and various other technologies such as Git and Linux.
@@ -92,24 +85,23 @@ const App = (props) => {
         </Grid>
 
         <Grid
-          marginTop="2vh"
           container
-          spacing={0}
+          marginTop="1vh"
+          spacing={1}
           direction="row"
-          alignItems="center"
-          justifyContent="center"
+          justify="space-around"
         >
-          <Grid item xs={2}>
+          <Grid item>
             <Link
               href="https://www.linkedin.com/in/joonas-kirvesm%C3%A4ki-836632227/"
               target="_blank"
             >
-              <LinkedIn sx={{ fontSize: 90, color: "#666666" }} />
+              <LinkedIn sx={{ fontSize: 50, color: "#666666" }} />
             </Link>
           </Grid>
-          <Grid item xs={2}>
+          <Grid item>
             <Link href="https://github.com/Jkirvesmaki" target="_blank">
-              <GitHubIcon sx={{ fontSize: 90, color: "#666666" }} />
+              <GitHubIcon sx={{ fontSize: 50, color: "#666666" }} />
             </Link>
           </Grid>
         </Grid>
