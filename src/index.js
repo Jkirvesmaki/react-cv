@@ -10,7 +10,13 @@ const theme = createTheme({
     },
   },
 });
-
+theme.typography.title = {
+  fontFamily: ["Abel", "Sans-Serif"].join(","),
+  fontSize: "2.5rem",
+  [theme.breakpoints.up("md")]: {
+    fontSize: "3rem",
+  },
+};
 theme.typography.h3 = {
   fontFamily: ["Abel", "Sans-Serif"].join(","),
   fontSize: "2rem",

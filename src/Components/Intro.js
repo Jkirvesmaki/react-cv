@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div>
       <Typography
-        variant="h3"
+        variant="title"
         gutterBottom
         component="div"
         sx={{ fontWeight: "bold" }}
