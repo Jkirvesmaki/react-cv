@@ -25,14 +25,12 @@ const App = (props) => {
             item
             xs={5}
             justifyContent="left"
-            sx={{
-              display: { xs: "none", lg: "block" },
-            }}
+           
           >
             <Avatar
               alt="avatar"
               src={avatar}
-              sx={{ width: 240, height: 265 }}
+              sx={{ width: '100%', height: 'auto' }}
               variant="square"
             />
           </Grid>
