@@ -30,7 +30,7 @@ const App = (props) => {
             <Avatar
               alt="avatar"
               src={avatar}
-              sx={{ width: '100%', height: 'auto' }}
+              sx={{ width: '77%', height: 'auto' }}
               variant="square"
             />
           </Grid>
